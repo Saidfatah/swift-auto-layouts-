@@ -17,29 +17,33 @@ class ViewController: UIViewController {
         return imageView
     }()
     
-    let descriptionTitleTextView:UITextView = {
+    let descriptionTextView:UITextView = {
         let textView = UITextView()
-        textView.text = "hey this is teh first slide"
-        textView.font = UIFont.boldSystemFont(ofSize: 18)
+        //textView.text = "hey this is teh first slide"
+        //textView.font = UIFont.boldSystemFont(ofSize: 18)
+        
+        let attributedString = NSMutableAttributedString(string: "Join us today in our fun and games!", attributes: [
+            NSAttributedString.Key.font: UIFont.boldSystemFont(ofSize: 18),
+            NSAttributedString.Key.strokeColor : UIColor.blue
+        ]
+        )
+        
+        attributedString.append(NSAttributedString(string:"\n\n\ndescription yeah this is the description of slider 1description yeah this is the description of slider 1 description yeah this is the description of slider 1",
+            attributes: [
+               NSAttributedString.Key.font : UIFont.systemFont(ofSize: 13),
+               NSAttributedString.Key.foregroundColor : UIColor.gray
+           ]
+        ))
+        
+        textView.attributedText = attributedString
         textView.textAlignment = .center
-        //enable auto layout
         textView.translatesAutoresizingMaskIntoConstraints = false
         textView.isEditable = false
         textView.isScrollEnabled = false
         return textView
     }()
     
-    let descriptionBodyTextView:UITextView = {
-        let textView = UITextView()
-        textView.text = "description description description description description description description description description description description description description description description description description "
-        textView.font?.withSize(16)
-        textView.textAlignment = .center
-        //enable auto layout
-        textView.translatesAutoresizingMaskIntoConstraints = false
-        textView.isEditable = false
-        textView.isScrollEnabled = false
-        return textView
-    }()
+ 
     
     // avoid polluting view load
     override func viewDidLoad() {
@@ -47,8 +51,7 @@ class ViewController: UIViewController {
         // Do any additional setup after loading the view.
         
         
-        view.addSubview(descriptionTitleTextView)
-        view.addSubview(descriptionBodyTextView)
+        view.addSubview(descriptionTextView)
         setupLoayout()
         
     }
@@ -69,17 +72,11 @@ class ViewController: UIViewController {
       
         topImageView.heightAnchor.constraint(equalTo: view.heightAnchor, multiplier: 0.5).isActive = true
         
-        // title
-        descriptionTitleTextView.topAnchor.constraint(equalTo: bearImageView.bottomAnchor,constant: 100).isActive = true
-        descriptionTitleTextView.leftAnchor.constraint(equalTo: view.leftAnchor).isActive = true
-        descriptionTitleTextView.rightAnchor.constraint(equalTo: view.rightAnchor).isActive = true
-        descriptionTitleTextView.bottomAnchor.constraint(equalTo: descriptionBodyTextView.topAnchor).isActive = true
-        
-        // body
-        descriptionBodyTextView.topAnchor.constraint(equalTo: descriptionTitleTextView.bottomAnchor,constant: 50).isActive = true
-        descriptionBodyTextView.leftAnchor.constraint(equalTo: view.leftAnchor).isActive = true
-        descriptionBodyTextView.rightAnchor.constraint(equalTo: view.rightAnchor).isActive = true
-        descriptionBodyTextView.bottomAnchor.constraint(equalTo: view.bottomAnchor).isActive = true
+        // description
+        descriptionTextView.topAnchor.constraint(equalTo: topImageView.bottomAnchor,constant: 50).isActive = true
+        descriptionTextView.leftAnchor.constraint(equalTo: view.leftAnchor, constant: 24).isActive = true
+        descriptionTextView.rightAnchor.constraint(equalTo: view.rightAnchor,constant: -24).isActive = true
+        descriptionTextView.bottomAnchor.constraint(equalTo: view.bottomAnchor).isActive = true
     }
 
 
