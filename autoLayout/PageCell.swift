@@ -8,32 +8,39 @@
 import UIKit
 
 class PageCell : UICollectionViewCell {
-    let bearImageView:UIImageView = {
+    
+    var page : Page? {
+        didSet{
+            guard let unwrappedPage = page else {return}
+            bearImageView.image = UIImage(named: unwrappedPage.imageName)
+            
+            let attributedString = NSMutableAttributedString(string:unwrappedPage.headerTitle, attributes: [
+                NSAttributedString.Key.font: UIFont.boldSystemFont(ofSize: 18),
+                NSAttributedString.Key.strokeColor : UIColor.blue
+            ]
+            )
+            
+            attributedString.append(NSAttributedString(string:"\n\n\n\(unwrappedPage.description)",
+                attributes: [
+                   NSAttributedString.Key.font : UIFont.systemFont(ofSize: 13),
+                   NSAttributedString.Key.foregroundColor : UIColor.gray
+               ]
+            ))
+            descriptionTextView.attributedText = attributedString
+            descriptionTextView.textAlignment = .center
+        }
+    }
+    private let bearImageView:UIImageView = {
         let imageView = UIImageView(image: UIImage(named: "horse"))
         //enable auto layout
         imageView.translatesAutoresizingMaskIntoConstraints = false
         imageView.contentMode = .scaleAspectFit
         return imageView
     }()
-    let descriptionTextView:UITextView = {
+    private let descriptionTextView:UITextView = {
         let textView = UITextView()
         //textView.text = "hey this is teh first slide"
         //textView.font = UIFont.boldSystemFont(ofSize: 18)
-        
-        let attributedString = NSMutableAttributedString(string: "Join us today in our fun and games!", attributes: [
-            NSAttributedString.Key.font: UIFont.boldSystemFont(ofSize: 18),
-            NSAttributedString.Key.strokeColor : UIColor.blue
-        ]
-        )
-        
-        attributedString.append(NSAttributedString(string:"\n\n\ndescription yeah this is the description of slider 1description yeah this is the description of slider 1 description yeah this is the description of slider 1",
-            attributes: [
-               NSAttributedString.Key.font : UIFont.systemFont(ofSize: 13),
-               NSAttributedString.Key.foregroundColor : UIColor.gray
-           ]
-        ))
-        
-        textView.attributedText = attributedString
         textView.textAlignment = .center
         textView.translatesAutoresizingMaskIntoConstraints = false
         textView.isEditable = false

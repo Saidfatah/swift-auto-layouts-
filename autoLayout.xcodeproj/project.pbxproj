@@ -18,6 +18,7 @@
 		209403A527F7279E00F71569 /* autoLayoutUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 209403A427F7279E00F71569 /* autoLayoutUITestsLaunchTests.swift */; };
 		209403B227F9CBC500F71569 /* SwippingController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 209403B127F9CBC500F71569 /* SwippingController.swift */; };
 		209403B427F9E24200F71569 /* PageCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 209403B327F9E24200F71569 /* PageCell.swift */; };
+		209403B627F9EFB700F71569 /* Page.swift in Sources */ = {isa = PBXBuildFile; fileRef = 209403B527F9EFB700F71569 /* Page.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -53,6 +54,7 @@
 		209403A427F7279E00F71569 /* autoLayoutUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = autoLayoutUITestsLaunchTests.swift; sourceTree = "<group>"; };
 		209403B127F9CBC500F71569 /* SwippingController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SwippingController.swift; sourceTree = "<group>"; };
 		209403B327F9E24200F71569 /* PageCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PageCell.swift; sourceTree = "<group>"; };
+		209403B527F9EFB700F71569 /* Page.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Page.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -112,6 +114,7 @@
 				2094038F27F7279E00F71569 /* Info.plist */,
 				209403B127F9CBC500F71569 /* SwippingController.swift */,
 				209403B327F9E24200F71569 /* PageCell.swift */,
+				209403B527F9EFB700F71569 /* Page.swift */,
 			);
 			path = autoLayout;
 			sourceTree = "<group>";
@@ -266,6 +269,7 @@
 			files = (
 				209403B227F9CBC500F71569 /* SwippingController.swift in Sources */,
 				209403B427F9E24200F71569 /* PageCell.swift in Sources */,
+				209403B627F9EFB700F71569 /* Page.swift in Sources */,
 				2094038627F7279B00F71569 /* ViewController.swift in Sources */,
 				2094038227F7279B00F71569 /* AppDelegate.swift in Sources */,
 				2094038427F7279B00F71569 /* SceneDelegate.swift in Sources */,
