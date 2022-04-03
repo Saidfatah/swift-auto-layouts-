@@ -50,7 +50,7 @@ class ViewController: UIViewController {
     
     private let previousButton : UIButton = {
         let button = UIButton(type:.system)
-        button.setTitle("Previous", for: .normal)
+        button.setTitle("PREV", for: .normal)
         button.translatesAutoresizingMaskIntoConstraints = false
         button.backgroundColor = .white
         button.titleLabel?.font = UIFont.boldSystemFont(ofSize: 14)
@@ -60,7 +60,7 @@ class ViewController: UIViewController {
     }()
     private let nextButton : UIButton = {
         let button = UIButton(type:.system)
-        button.setTitle("Next", for: .normal)
+        button.setTitle("NEXT", for: .normal)
         button.translatesAutoresizingMaskIntoConstraints = false
         button.backgroundColor = .white
         button.titleLabel?.font = UIFont.boldSystemFont(ofSize: 14)
@@ -96,13 +96,15 @@ class ViewController: UIViewController {
         bottomControlsStackView.distribution = .fillEqually
         bottomControlsStackView.translatesAutoresizingMaskIntoConstraints = false
         view.addSubview(bottomControlsStackView)
+      
+        
         NSLayoutConstraint.activate(
             [
                 bottomControlsStackView.bottomAnchor.constraint(equalTo: view.safeAreaLayoutGuide.bottomAnchor),
                 bottomControlsStackView.trailingAnchor.constraint(equalTo: view.trailingAnchor),
                 bottomControlsStackView.leadingAnchor.constraint(equalTo: view.leadingAnchor),
                 bottomControlsStackView.heightAnchor.constraint(equalToConstant: 50),
-                bottomControlsStackView.widthAnchor.constraint(equalToConstant: 50)
+                bottomControlsStackView.widthAnchor.constraint(equalToConstant: 50),
             ]
         )
     }
