@@ -16,6 +16,8 @@
 		2094039927F7279E00F71569 /* autoLayoutTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2094039827F7279E00F71569 /* autoLayoutTests.swift */; };
 		209403A327F7279E00F71569 /* autoLayoutUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 209403A227F7279E00F71569 /* autoLayoutUITests.swift */; };
 		209403A527F7279E00F71569 /* autoLayoutUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 209403A427F7279E00F71569 /* autoLayoutUITestsLaunchTests.swift */; };
+		209403B227F9CBC500F71569 /* SwippingController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 209403B127F9CBC500F71569 /* SwippingController.swift */; };
+		209403B427F9E24200F71569 /* PageCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 209403B327F9E24200F71569 /* PageCell.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -49,6 +51,8 @@
 		2094039E27F7279E00F71569 /* autoLayoutUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = autoLayoutUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		209403A227F7279E00F71569 /* autoLayoutUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = autoLayoutUITests.swift; sourceTree = "<group>"; };
 		209403A427F7279E00F71569 /* autoLayoutUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = autoLayoutUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		209403B127F9CBC500F71569 /* SwippingController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SwippingController.swift; sourceTree = "<group>"; };
+		209403B327F9E24200F71569 /* PageCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PageCell.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -106,6 +110,8 @@
 				2094038A27F7279E00F71569 /* Assets.xcassets */,
 				2094038C27F7279E00F71569 /* LaunchScreen.storyboard */,
 				2094038F27F7279E00F71569 /* Info.plist */,
+				209403B127F9CBC500F71569 /* SwippingController.swift */,
+				209403B327F9E24200F71569 /* PageCell.swift */,
 			);
 			path = autoLayout;
 			sourceTree = "<group>";
@@ -258,6 +264,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				209403B227F9CBC500F71569 /* SwippingController.swift in Sources */,
+				209403B427F9E24200F71569 /* PageCell.swift in Sources */,
 				2094038627F7279B00F71569 /* ViewController.swift in Sources */,
 				2094038227F7279B00F71569 /* AppDelegate.swift in Sources */,
 				2094038427F7279B00F71569 /* SceneDelegate.swift in Sources */,
